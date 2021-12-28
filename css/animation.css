@@ -1,0 +1,79 @@
+.animate{
+  /* animation: showElement 1s linear 3s; */
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-play-state: running;
+  animation-fill-mode: both;
+}
+
+.fadeIn {
+  animation-name: showElement;
+}
+
+.fadeInUp{
+  animation-name: putElement;
+}
+
+.menu__top{
+  animation-name: changeColorUptoDown;
+}
+
+.menu {
+  animation-name: changeColorDowntoUp;
+}
+
+.hero__descr {
+  animation-delay: 1s;
+}
+
+.ad-1{
+  animation-delay: 1s;
+}
+
+.ad-1-5{
+  animation-delay: 1.5s;
+}
+
+.ad-2{
+  animation-delay: 2s;
+}
+
+.ad-2-5 {
+  animation-delay: 2.5s;
+}
+@keyframes changeColorUptoDown {
+  to {
+    background-position: 0 -100%;
+  }
+}
+
+@keyframes changeColorDowntoUp {
+  to {
+    background-position: 0 100%;
+  }
+}
+
+@keyframes showElement {
+  to {
+      opacity: 1
+  }
+}
+
+@keyframes putElement {
+  from {
+      transform: translate3d(0,50px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+#toggleMenu:checked ~ .menu {
+  display: block;
+}
+
+
